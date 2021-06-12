@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: 1d0a6c7b778196f46b3448b1e563312c
 folderAsset: yes
 DefaultImporter:
@@ -8,10 +9,20 @@ DefaultImporter:
 <<<<<<< Updated upstream:SF/Assets/SkySerie Freebie/ExampleScenes.meta
 guid: 86425fc531d96d146b84220a347e07f7
 =======
+<<<<<<< Updated upstream:SF/Assets/SkySerie Freebie/ExampleScenes/SceneObjects.meta
+guid: 4f34c5940141eff4e82f4c8bfdf6e203
+>>>>>>> Stashed changes
+=======
 guid: 1d0a6c7b778196f46b3448b1e563312c
 >>>>>>> Stashed changes:SF/Assets/SkySerie Freebie.meta
 folderAsset: yes
+<<<<<<< Updated upstream
 timeCreated: 1509071275
+licenseType: Store
+DefaultImporter:
+>>>>>>> Stashed changes
+=======
+timeCreated: 1509071481
 licenseType: Store
 DefaultImporter:
 >>>>>>> Stashed changes

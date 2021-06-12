@@ -2,6 +2,11 @@ Base path: 'D:/Program/2019.4.26f1/Editor/Data', plugins path 'D:/Program/2019.4
 Cmd: initializeCompiler
 Cmd: shutdown
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+Quitting shader compiler process
+>>>>>>> Stashed changes
 =======
 
 Quitting shader compiler process
