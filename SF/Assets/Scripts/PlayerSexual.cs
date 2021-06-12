@@ -14,10 +14,4 @@ public class PlayerSexual : MonoBehaviour
         if (isMale) male.SetActive(true);
         else female.SetActive(true);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

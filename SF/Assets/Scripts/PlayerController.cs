@@ -5,18 +5,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Rigidbody playerRigidbody;
+    public GameObject male;
+    public GameObject female;
+    public GameObject playerSexual;
+    Animator animator;
+
+    private bool isMale;
+
     public float speed = 8f;
     public float rotateSpeed = 8f;
-
+    
     private float xInput;
     private float zInput;
 
     private Vector3 movement;
-    private Rigidbody playerRigidbody;
 
     void Start()
     {
+        PlayerSexual sex = playerSexual.GetComponent<PlayerSexual>();
+        isMale = sex.isMale;
         playerRigidbody = GetComponent<Rigidbody>();
+        if (isMale) animator = male.GetComponent<Animator>();
+        else animator = female.GetComponent<Animator>();
     }
 
     void FixedUpdate()

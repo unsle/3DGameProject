@@ -1122,7 +1122,6 @@ MonoBehaviour:
   - {fileID: 1204684588}
   - {fileID: 2081732017}
   - {fileID: 413202735}
-  HP: 5
 --- !u!1 &1204684588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,6 +1672,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4543171fac5c2fa46965d0157a1c4f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  male: {fileID: 3306514763065142499}
+  female: {fileID: 3495737318051396878}
+  playerSexual: {fileID: 0}
   speed: 4
   rotateSpeed: 8
 --- !u!4 &1970430482
