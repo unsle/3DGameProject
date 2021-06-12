@@ -1,2 +1,6 @@
-Base path: 'D:/UnityLibrary/2019.4.26f1/Editor/Data', plugins path 'D:/UnityLibrary/2019.4.26f1/Editor/Data/PlaybackEngines'
+Base path: 'D:/Program/2019.4.26f1/Editor/Data', plugins path 'D:/Program/2019.4.26f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
+<<<<<<< Updated upstream
+=======
+Cmd: shutdown
+>>>>>>> Stashed changes
