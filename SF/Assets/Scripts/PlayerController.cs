@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     private bool isMale;
 
     public float speed = 8f;
-<<<<<<< HEAD
     public float rotateSpeed = 8f;
     
     private float xInput;
@@ -22,9 +21,6 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 movement;
 
-=======
-    public float force = 10.0f;
->>>>>>> Lee
     void Start()
     {
         PlayerSexual sex = playerSexual.GetComponent<PlayerSexual>();
@@ -48,17 +44,9 @@ public class PlayerController : MonoBehaviour
         //Vector3 newVelocity = new Vector3(xSpeed, 0f, zSpeed);
         //playerRigidbody.velocity = newVelocity;
 
-<<<<<<< HEAD
         if (xInput != 0 || zInput != 0)
             Turn();
         else return;
-=======
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            playerRigidbody.AddForce(Vector3.up * force, ForceMode.Impulse);
-        }
-
->>>>>>> Lee
     }
 
     void Turn()
