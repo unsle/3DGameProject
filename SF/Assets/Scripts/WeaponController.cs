@@ -19,12 +19,14 @@ public class WeaponController : MonoBehaviour
 
     public void Mage()
     {
+        Debug.Log("Mage");
         mage.SetActive(true);
         knight.SetActive(false);
     }
 
     public void Knight()
     {
+        Debug.Log("Knight");
         mage.SetActive(false);
         knight.SetActive(true);
     }
