@@ -1,3 +1,3 @@
 ﻿public interface IHealable {
-    void onHeal(int Heal);
+    void OnHeal(int heal);
 }

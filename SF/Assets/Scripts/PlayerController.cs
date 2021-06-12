@@ -7,7 +7,13 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 8f;
     public float rotateSpeed = 8f;
+
+    private float xInput;
+    private float zInput;
+
+    private Vector3 movement;
     private Rigidbody playerRigidbody;
+
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
@@ -15,30 +21,26 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float xInput = Input.GetAxis("Horizontal");
-        float zInput = Input.GetAxis("Vertical");
+        xInput = Input.GetAxis("Horizontal");
+        zInput = Input.GetAxis("Vertical");
 
-        float xSpeed = xInput * speed;
-        float zSpeed = zInput * speed;
+        //playerRigidbody.MovePosition(playerRigidbody.position + new Vector3(xSpeed, 0f, zSpeed));
 
-        Vector3 newVelocity = new Vector3(xSpeed, 0f, zSpeed);
-        playerRigidbody.velocity = newVelocity;
+        movement.Set(xInput, 0, zInput);
+        movement = movement.normalized * speed * Time.deltaTime;
 
-        Turn(newVelocity);
+        playerRigidbody.MovePosition(transform.position + movement);
+        //Vector3 newVelocity = new Vector3(xSpeed, 0f, zSpeed);
+        //playerRigidbody.velocity = newVelocity;
+
+        if (xInput != 0 || zInput != 0)
+            Turn();
+        else return;
     }
 
-    void Turn(Vector3 newVelocity)
+    void Turn()
     {
-        if (newVelocity.x == 0 && newVelocity.z == 0) return;
-
-        Quaternion newRotation = Quaternion.LookRotation(newVelocity);
-
-        playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, newRotation, rotateSpeed * Time.deltaTime);
-    }
-
-    //if die
-    void Die()
-    {
-
+            Quaternion newRotation = Quaternion.LookRotation(new Vector3(xInput, 0, zInput));
+            playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, newRotation, rotateSpeed * Time.deltaTime);
     }
 }
